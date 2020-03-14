@@ -1,0 +1,24 @@
+{
+  "name": "nodeServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "set PORT=9000 && nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": { 
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "gravatar": "^1.8.0",
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.1"
+  }
+}

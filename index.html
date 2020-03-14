@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            /* 把border两条线的合并变成一条线 */
+            border: none;
+        }
+        td{
+            border: none;
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+            padding:10px;
+        }
+        td:last-child{
+            border-right: none;
+        }
+        thead {
+            border-top: 5px solid #ddd;
+        }
+        tbody tr:last-child td{
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr{
+            transition: .5s;
+        }
+        tbody tr:hover{
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" cellspacing="10">
+        <thead>
+            <tr>
+                <td>编号</td>
+                <td>标题</td>
+                <td>网址</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>在线社区</td>
+                <td>123123</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>开源系统</td>
+                <td>123123zxdxzdzasdas</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>开发实战</td>
+                <td>123123</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+
+        </tfoot>
+    </table>
+</body>
+
+</html>
