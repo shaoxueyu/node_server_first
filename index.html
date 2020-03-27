@@ -6,67 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
-            text-align: center;
-            border-collapse: collapse;
-            /* 把border两条线的合并变成一条线 */
-            border: none;
+        * {
+            padding: 0;
+            margin: 0;
         }
-        td{
-            border: none;
-            border-right: none;
-            border-bottom: 1px solid #ddd;
-            padding:10px;
+
+        #header {
+            width: 100%;
+            background-color: #ccc;
         }
-        td:last-child{
-            border-right: none;
+
+        #footer {
+            width: 100%;
+            background-color: #ccc;
         }
-        thead {
-            border-top: 5px solid #ddd;
+
+        .column {
+            float: left;
+            height: 200px;
         }
-        tbody tr:last-child td{
-            border-bottom: 1px solid #ddd;
+
+        #container {
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            padding-left: 200px;
+            padding-right: 300px;
+            background-color: antiquewhite;
         }
-        tbody tr{
-            transition: .5s;
+
+        #conter {
+            width: 100%;
+            background-color: red;
         }
-        tbody tr:hover{
-            background-color: #eee;
+
+        #left {
+            position: absolute;
+            right: calc(100% - 200px);
+            width: 200px;
+            background-color: green;
+            margin-left: -100%;
+        }
+
+        #right {
+            width: 300px;
+            background-color: blue;
+            margin-right: -300px;
+        }
+
+        #container::after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+
         }
     </style>
 </head>
 
 <body>
-    <table border="1" cellspacing="10">
-        <thead>
-            <tr>
-                <td>编号</td>
-                <td>标题</td>
-                <td>网址</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>在线社区</td>
-                <td>123123</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>开源系统</td>
-                <td>123123zxdxzdzasdas</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>开发实战</td>
-                <td>123123</td>
-            </tr>
-        </tbody>
+    <!-- 圣杯布局 -->
+    <header id="header">header</header>
+    <div id="container">
+        <div id="conter" class="column">conter</div>
+        <div id="left" class="column">left</div>
+        <div id="right" class="column">right</div>
+    </div>
+    <footer id="footer">footer</footer>
 
-        <tfoot>
-
-        </tfoot>
-    </table>
 </body>
+<!-- <script src="./test1.js">
+  
+</script> -->
 
 </html>

@@ -1,26 +1,29 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ProfileSchema = new Schema({
-    type:{
-        type:String
-    },
-    describe:{
-        type:String
-    },
-    income:{
-        type:String
-    },
-    expend:{
-        type:String
-    },
-    cash:{
-        type:String
-    },
-    date:{
-        type:String,
-        required: true
-    }
+	type: {
+		type: String
+	},
+	describe: {
+		type: String
+	},
+	income: {
+		type: String
+	},
+	expend: {
+		type: String
+	},
+	cash: {
+		type: String
+	},
+	date: {
+		type: String,
+		required: true
+	},
+	remark: {
+		type: String
+	}
 })
 
-module.exports = profile = mongoose.model("profile",ProfileSchema)
+module.exports = profile = mongoose.model('profile', ProfileSchema)
